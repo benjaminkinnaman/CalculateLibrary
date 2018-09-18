@@ -64,4 +64,66 @@ public class Calculate {
 		return answer;
 	}
 	
+	public static boolean isDivisbleBy(int divideMe, int iDivide) {
+		boolean answer;
+		if (divideMe % iDivide == 0) {
+			answer = true;
+		
+}	else {
+		answer = false;
 }
+		return answer;
+	}
+		
+	
+	public static double absValue(double notAbs) {							//Finds the absolute value of a number.
+	double answer;															//Declares answer output.
+	if (notAbs >= 0) {														//Checks if our input is more than or equal to zero; is it positive?
+		answer = notAbs;														//If this is true, then it is the output.
+	} else {				
+		answer = notAbs + (notAbs * 2);											//If this is not true, and the number is negative, add the number times itself to itself.
+	}
+		return answer;
+	}
+	
+	public static double max(double first, double second) {					//Finds the largest of two numbers.
+		double answer;
+		if (first > second) {
+			answer = first;
+		} else {
+			answer = second;
+		}
+		
+		return answer;
+	}
+	
+	public static double max(double first, double second, double third) {	//Finds the largest of three numbers.
+		double answer;
+		if (first > second && first > third) {
+			answer = first;			
+		} else if (second > first && second > third) {
+			answer = second;
+		} else if (third > first && third > second) {
+			answer = third;
+		}
+			return answer;
+	}
+	
+	public static int min(int first, int second) {
+		int answer;
+		if (first < second) {
+			answer = first;
+		} else {
+			answer = second;
+		}
+		
+		return answer;
+	}
+	
+	public static double round2() {
+		double answer;
+		
+		return answer;
+	}
+	
+	} //Final bracket
