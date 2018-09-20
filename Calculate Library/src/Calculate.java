@@ -121,9 +121,17 @@ public class Calculate {
 	}
 	
 	public static double round2(double roundMe) {
-		double answer = 0;
-		answer = Math.round(roundMe*100.0)/100.0;	//By multiplying and then dividung by 100.0 we can see the number expanded without the decimal point, do our rounding magic, then collapse it back into a decimal by dividing.
+		double expanded = roundMe * 100;
+		int convert = (int) expanded;
+		double recompressed = (double) convert / 100;
+		double throwMeAway = recompressed + 0.005;
+		if (roundMe>throwMeAway) {
+			roundMe += 0.01;
+		}
+		double finalRecompress = roundMe*100;
+		int prepareoutput = (int) finalRecompress;
+		double answer = (double) prepareoutput / 100;
 		return answer;
-	}
+	}	
 	
 	} //Final bracket
