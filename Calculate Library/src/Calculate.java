@@ -46,17 +46,17 @@ public class Calculate {
 		return answer;	
 	}
 	
-//	public static String toImproperFrac(int wholeNumInit, int denom, int initNumerator) {  //Converts a mixed number into an improper fraction.
-//		String answer;
-//		answer = ((wholeNumInit * denom) +  );
-//		return answer;
-//	}
+	public static String toImproperFrac(int wholeNumInit, int numerator, int denom) {  //Converts a mixed number into an improper fraction.
+		String answer;
+		answer = (((wholeNumInit * denom) + numerator) + "/" + denom );
+		return answer;
+	}
 	
-//	public static double toMixedNum() {		//Converts an improper fraction into a mixed number.
-//		double answer;
-//		answer = ();
-//		return answer;
-//	}
+	public static String toMixedNum(int numerator, int denom) {		//Converts an improper fraction into a mixed number.
+		String answer;
+		answer = ((numerator / denom) + " " + (numerator % denom) + "/" + denom);
+		return answer;
+	}
 
 	public static String foil(int a, int b, int c, int d, String var)  {	//Converts a binomial multiplication of the form (ax+b)(cx+d) into a quad equation ax^2+bx+c
 		String answer;
@@ -98,7 +98,7 @@ public class Calculate {
 	}
 	
 	public static double max(double first, double second, double third) {	//Finds the largest of three numbers.
-		double answer;
+		double answer = 0;
 		if (first > second && first > third) {
 			answer = first;			
 		} else if (second > first && second > third) {
@@ -120,9 +120,9 @@ public class Calculate {
 		return answer;
 	}
 	
-	public static double round2() {
-		double answer;
-		
+	public static double round2(double roundMe) {
+		double answer = 0;
+		answer = Math.round(roundMe*100.0)/100.0;	//By multiplying and then dividung by 100.0 we can see the number expanded without the decimal point, do our rounding magic, then collapse it back into a decimal by dividing.
 		return answer;
 	}
 	
