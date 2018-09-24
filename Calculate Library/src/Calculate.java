@@ -54,7 +54,7 @@ public class Calculate {
 	
 	public static String toMixedNum(int numerator, int denom) {		//Converts an improper fraction into a mixed number.
 		String answer;
-		answer = ((numerator / denom) + " " + (numerator % denom) + "/" + denom);
+		answer = ((numerator / denom) + "_" + (numerator % denom) + "/" + denom);
 		return answer;
 	}
 
@@ -132,6 +132,22 @@ public class Calculate {
 		int prepareoutput = (int) finalRecompress;
 		double answer = (double) prepareoutput / 100;
 		return answer;
-	}	
+	}	 
+	
+	//Part 3
+	
+	public static double exponent(double number, int exponent) {
+		double answer;
+		if (exponent == 0) {
+			answer = 1;
+		} else {
+			for (int loopcount = 1; loopcount <= exponent; loopcount++) {
+				exponent *= exponent; 
+			}
+			answer = exponent;
+		}
+		
+		return answer;
+	}
 	
 	} //Final bracket
