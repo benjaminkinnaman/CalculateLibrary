@@ -138,16 +138,29 @@ public class Calculate {
 	
 	public static double exponent(double number, int exponent) {
 		double answer;
+		double numDefault = number;
 		if (exponent == 0) {
 			answer = 1;
 		} else {
-			for (int loopcount = 1; loopcount <= exponent; loopcount++) {
-				exponent *= exponent; 
+			for (int loopcount = 1; loopcount < exponent; loopcount++) {
+				number *= numDefault; 
 			}
-			answer = exponent;
+			answer = number;
 		}
 		
 		return answer;
 	}
+	
+	public static int factorial(int input) {
+		int answer = input;
+		for (int tickdown = input - 1; tickdown > 0; tickdown--) {
+			answer *= tickdown;
+		}
+		return answer;
+	}
+	
+/*	public static int isPrime(int input) {
+		
+	}*/
 	
 	} //Final bracket
