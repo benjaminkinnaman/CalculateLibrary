@@ -159,8 +159,17 @@ public class Calculate {
 		return answer;
 	}
 	
-/*	public static int isPrime(int input) {
+	public static boolean isPrime(int input) {	//isPrime
+		boolean primeStatus = true;
+		for (int checkThisNumber = 2; checkThisNumber <= input; checkThisNumber++) {
+			if (isDivisbleBy(input, checkThisNumber) && input != checkThisNumber) {
+				primeStatus = false;
+			}	else /*if (input % checkThisNumber != 0)*/{
+				primeStatus = true;
+			}
+		}
+			return primeStatus;
 		
-	}*/
+	}	//isPrime ends
 	
 	} //Final bracket
