@@ -151,25 +151,30 @@ public class Calculate {
 		return answer;
 	}
 	
-	public static int factorial(int input) {
-		int answer = input;
-		for (int tickdown = input - 1; tickdown > 0; tickdown--) {
+	public static int factorial(int userVar) {
+		int answer = userVar;
+		for (int tickdown = userVar - 1; tickdown > 0; tickdown--) {
 			answer *= tickdown;
 		}
 		return answer;
 	}
 	
-	public static boolean isPrime(int input) {	//isPrime
+	public static boolean isPrime(int userVar) {	//isPrime
 		boolean primeStatus = true;
-		for (int checkThisNumber = 2; checkThisNumber <= input; checkThisNumber++) {
-			if (isDivisbleBy(input, checkThisNumber) && input != checkThisNumber) {
+		for (int checkThisNumber = 2; checkThisNumber <= userVar; checkThisNumber++) {
+			if (isDivisbleBy(userVar, checkThisNumber) && userVar != checkThisNumber) {
 				primeStatus = false;
-			}	else /*if (input % checkThisNumber != 0)*/{
+				return primeStatus;
+			}	else if (userVar % checkThisNumber != 0){
 				primeStatus = true;
 			}
 		}
 			return primeStatus;
 		
 	}	//isPrime ends
+	
+/*	public static int gcf(int num1, int num2 ) {
+		
+	}*/
 	
 	} //Final bracket

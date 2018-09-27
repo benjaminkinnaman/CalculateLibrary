@@ -21,7 +21,9 @@ public class DoMath {
 		System.out.println(Calculate.max(8, 65, 25));
 		System.out.println(Calculate.min(8, 56));
 		System.out.println(Calculate.round2(56.65467));
-		System.out.println(Calculate.isPrime(4));
+		System.out.println(Calculate.exponent(5, 3));
+		System.out.println(Calculate.factorial(6));
+		System.out.println(Calculate.isPrime(9));
 	
 	
 	}
