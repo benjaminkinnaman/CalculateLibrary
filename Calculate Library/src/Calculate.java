@@ -173,8 +173,22 @@ public class Calculate {
 		
 	}	//isPrime ends
 	
-/*	public static int gcf(int num1, int num2 ) {
+	public static int gcf(int num1, int num2) {
+		int answer = 0;
+		for (int factorbyMe = min(num1,num2); factorbyMe > 0; factorbyMe--) {
+			if (num1%factorbyMe == 0 && num2%factorbyMe == 0) {
+				if (answer <= factorbyMe) {
+					answer = factorbyMe;
+				}
+			}
+		}
+		return answer;
+	}
+	
+	public static double sqrt(double findMySqrt) {
+		double answer = 1;
 		
-	}*/
+		return answer;
+	}
 	
 	} //Final bracket
