@@ -187,7 +187,13 @@ public class Calculate {
 	
 	public static double sqrt(double findMySqrt) {
 		double answer = 1;
-		
+		double rooted = 0;
+		double squareVal = rooted;
+		while (squareVal < findMySqrt) {
+			squareVal++;
+			squareVal = rooted * rooted;
+		}
+		answer = rooted;
 		return answer;
 	}
 	
