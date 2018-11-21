@@ -196,5 +196,21 @@ public class Calculate {
 		answer = rooted;
 		return answer;
 	}
+	public static String quadform(int num1, int num2, int num3) {
+		double discriminantCheck = discriminant(num1,num2,num3);	//Checks discriminant and returns answer
+		if (discriminantCheck < 0) {
+			return "no real roots";
+		}
+		
+		double secondcheck = sqrt(discriminantCheck);
+		double result = (secondcheck - num2) / 2 * num1;
+		double dcout = (-secondcheck - num2) / 2 * num1;
+	
+		if (discriminantCheck == 0) {
+			return result + " ";	//Adding a " " converts to a string.
+		} else {
+			return result + " and " + dcout;
+		}
+	}
 	
 	} //Final bracket
